@@ -14,12 +14,12 @@ A Flutter plugin for IOS and Android providing a simple way to share a message, 
 First, add this to your package's pubspec.yaml file:
 ```
 dependencies:
-  whatsapp_share: ^2.0.0-nullsafety.0
+  whatsapp_share2: ^2.0.0
 ```
 
 Now in your Dart code, you can use:
 ```
-import 'package:whatsapp_share/whatsapp_share.dart';
+import 'package:whatsapp_share2/whatsapp_share.dart';
 ```
 ## Installation (Platform Specific)
 
