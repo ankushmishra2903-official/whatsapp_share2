@@ -97,7 +97,7 @@ Here is an snippets app displaying the two whatsapp share methods .
     await WhatsappShare.share(
       text: 'Whatsapp share text',
       linkUrl: 'https://flutter.dev/',
-      phone: '911234567890',
+      phone: '91xxxxxxxxxx',
     );
   }
 
@@ -112,7 +112,7 @@ Here is an snippets app displaying the two whatsapp share methods .
  Future<void> shareFile() async {
     await WhatsappShare.shareFile(
       text: 'Whatsapp share text',
-      phone: '911234567890',
+      phone: '91xxxxxxxxxx',
       filePath: [_image1.path, _image2.path],
     );
   }
@@ -121,3 +121,4 @@ Here is an snippets app displaying the two whatsapp share methods .
 "# whatsapp_share" 
 "# whatsapp_share" 
 "# whatsapp_share2" 
+"# whatsapp_share null safe" 
