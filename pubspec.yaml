@@ -1,7 +1,8 @@
 name: whatsapp_share2
 description: Simple way to share message, links or files from your flutter app to specific contact in whatsapp
-version: 2.0.0
+version: 2.0.2
 homepage: https://github.com/ankushmishra2903-official/whatsapp_share2.git
+issue_tracker: https://github.com/ankushmishra2903-official/whatsapp_share2/issues
 
 
 
