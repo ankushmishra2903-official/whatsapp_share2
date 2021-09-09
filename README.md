@@ -19,7 +19,7 @@ dependencies:
 
 Now in your Dart code, you can use:
 ```
-import 'package:whatsapp_share2/whatsapp_share.dart';
+import 'package:whatsapp_share2/whatsapp_share2.dart';
 ```
 ## Installation (Platform Specific)
 
