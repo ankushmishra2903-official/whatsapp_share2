@@ -24,7 +24,16 @@ class MyApp extends StatelessWidget {
 
   Future<void> shareFile() async {
     await getImage();
-    Directory? directory = await getExternalStorageDirectory();
+    Directory? directory;
+
+    if (Platform.isAndroid) {
+      // For Android
+      directory = await getExternalStorageDirectory();
+    } else if (Platform.isIOS) {
+      // For Ios
+      directory = await getApplicationDocumentsDirectory();
+    }
+    // Directory? directory = await getExternalStorageDirectory();
 
     print('${directory!.path} / ${_image!.path}');
     await WhatsappShare.shareFile(
@@ -75,10 +84,19 @@ class MyApp extends StatelessWidget {
       final ImagePicker _picker = ImagePicker();
       XFile? _pickedFile =
           (await _picker.pickImage(source: ImageSource.gallery));
-
+      var directory;
       if (_pickedFile != null) {
-        // getting a directory path for saving
-        final directory = await getExternalStorageDirectory();
+        if (Platform.isAndroid) {
+          // For Android
+          directory = await getExternalStorageDirectory();
+        } else if (Platform.isIOS) {
+          // For Ios
+          directory = await getApplicationDocumentsDirectory();
+        }
+
+        // /getApplicationDocumentsDirectory();
+        // // getting a directory path for saving
+        // final directory = await getExternalStorageDirectory();
 
         // copy the file to a new path
         await _pickedFile.saveTo('${directory!.path}/image1.png');
