@@ -35,10 +35,10 @@ class MyApp extends StatelessWidget {
     }
     // Directory? directory = await getExternalStorageDirectory();
 
-    print('${directory!.path} / ${_image!.path}');
+    print('${directory!.path} / ${_image!.absolute.path}');
     await WhatsappShare.shareFile(
       phone: _phone,
-      filePath: ["${_image!.path}"],
+      filePath: ["${_image!.absolute.path}"],
     );
   }
 
@@ -99,7 +99,7 @@ class MyApp extends StatelessWidget {
         // final directory = await getExternalStorageDirectory();
 
         // copy the file to a new path
-        await _pickedFile.saveTo('${directory!.path}/image1.png');
+        await _pickedFile.saveTo('${directory!.absolute.path}/image1.png');
         _image = File('${directory.path}/image1.png');
       }
     } catch (er) {
